@@ -3,7 +3,7 @@
 TypeScript / Node.js 向量数据库客户端，通过包内预编译 Go 侧车提供 DiskVamana、HNSW 和多字段 Dataset。无需 node-gyp、Go 或相邻源码。
 
 ```sh
-pnpm add @leolee9086/vectordb
+pnpm add https://github.com/leolee9086/vectordb/releases/download/v0.1.0/leolee9086-vectordb-0.1.0.tgz
 ```
 
 ```ts

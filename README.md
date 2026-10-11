@@ -11,7 +11,7 @@
 - `tools/embedding`：可选嵌入模型探针，不属于安装包。
 - `docs`：引擎契约、迁移来源及历史实验记录。
 
-Go 消费者通过版本化 Go module 使用；Node 消费者通过 npm 版本使用，不需要相邻源码、Go 工具链或本地路径替换。
+Go 消费者通过版本化 Go module 使用；Node 消费者通过 [GitHub Release](https://github.com/leolee9086/vectordb/releases/tag/v0.1.0) 的固定版本 npm 格式安装包使用，不需要相邻源码、Go 工具链或本地路径替换。npm registry 发布尚待二次认证，当前可安装地址见 [Node README](node/README.md)。
 
 ## 构建与测试
 
