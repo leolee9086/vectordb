@@ -1,0 +1,28 @@
+{
+  "name": "@leolee9086/vectordb",
+  "version": "0.1.0",
+  "description": "DiskVamana and HNSW vector database for Node.js with a prebuilt Go sidecar",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "bin", "src", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "pnpm build:ts && pnpm build:sidecar",
+    "build:ts": "tsc -p tsconfig.json",
+    "build:sidecar": "node scripts/build-sidecar.ts",
+    "build:release": "pnpm build:ts && node scripts/build-sidecar.ts --all",
+    "test": "node --test test/*.test.mjs test/*.test.ts",
+    "check:scripts": "tsc --noEmit --strict --target ES2022 --module NodeNext --moduleResolution NodeNext scripts/build-sidecar.ts",
+    "prepack": "pnpm build:release"
+  },
+  "keywords": ["vectordb", "diskann", "vamana", "hnsw", "ann", "vector-search", "sidecar"],
+  "author": "Zhi",
+  "license": "AGPL-3.0-or-later",
+  "repository": { "type": "git", "url": "git+https://github.com/leolee9086/vectordb.git", "directory": "node" },
+  "homepage": "https://github.com/leolee9086/vectordb#readme",
+  "bugs": { "url": "https://github.com/leolee9086/vectordb/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22.19.0" },
+  "devDependencies": { "@types/node": "22.19.0", "typescript": "5.8.3" }
+}
